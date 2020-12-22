@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+height: fit-content;
+min-width: 100vw;
+overflow: hidden;
+}
+
+.container-circle{
+height: 100vh;
+width: 100%;
+overflow: hidden;
+position: absolute;
+z-index: -100;
+}
+
+.circle{
+    position: absolute;
+    height: 200vmax;
+    width: 200vmax;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(-45deg, #396fcc 0%, #396fcc 100%);
+    border-radius: 50%;
+}
+
+
+
+
+.textLogin{
+    position: absolute;
+    width: 30vw;
+    left: 7%;
+    top: 10vh;
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.textLogin h1{
+    font-size: 1.5rem;
+}
+
+.textLogin p{
+    font-size: 1rem;
+}
+
+.imgLogin{
+    position: absolute;
+    top: 200px;
+    left: 10%;
+    width: 27vw;
+    height: 20vw;
+}
+
+form{
+    position: absolute;
+    left: 60vw;
+    top: 20vh;
+    text-align: center;
+}
+
+form h1{
+    font-size: 2rem;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    color:#4a4a4a;
+}
+
+form div span{
+    margin-top:20px;
+    width: 5vw;
+    height: 4vmax;
+    vertical-align: middle;
+    display: inline-flex;
+    background-color: #f7f7f7;
+    border-radius: 50% 0 0 50% ;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    padding-left: .8rem;
+    color:#9a9a9a;
+}
+
+form input{
+    padding-left: .5rem;
+    vertical-align: middle;
+    width: 23vw;
+    height: 4vmax;
+    border-radius: 0 200vmax 200vmax 0 ;
+    border: none;
+    outline: none;
+    background-color: #f7f7f7;
+    font-size: 1rem;
+    font-weight:500;
+    font-family: "Poppins", sans-serif;
+    color:#4a4a4a;
+}
+
+form input:nth-child(2){
+    margin-top: 20px;
+}
+
+form input:nth-child(3){
+    margin-top: 20px;
+}
+
+form input:nth-child(5){
+    padding: 0 2vmax;
+    width: fit-content;
+    font-size: 1rem;
+    background-color: #396fcc;
+    color:white;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 5vmax;
+    border-radius: 30px;
+}
+
+form input:nth-child(5):hover{
+    background-color: #199fcc;
+}
+
+
+input::placeholder{
+    color:#9a9a9a;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 860px){
+
+
+    .container-circle{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: -100;
+        }
+    .circle{
+        width:1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 40%;
+        bottom: 300px;
+        right: inherit;
+        top: -1300px;
+      }
+
+    .textLogin{
+        position: absolute;
+        width: 35vw;
+        left: 12%;
+        top: 40px;
+        text-align: center;
+        color: white;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .imgLogin{
+        position: absolute;
+        top: 10%;
+        left: 140%;
+        width: 25vw;
+        height: 18vw;
+    }
+
+    
+    form{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 280px;
+        text-align: center;
+        overflow-x: hidden;
+    }    
+
+    form div span{
+        margin-top: 20px;
+        width: 5vw;
+        height: 3rem;
+        vertical-align: middle;
+        display: inline-flex;
+        background-color: #f7f7f7;
+        border-radius: 30px 0 0 30px ;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        padding: 0 2rem;
+        color:#9a9a9a;
+    }
+    
+    form input{
+        padding-left: .5rem;
+        vertical-align: middle;
+        width: 45vmax;
+        height: 3rem;
+        border-radius: 0 30px 30px 0 ;
+        border: none;
+        outline: none;
+        background-color: #f7f7f7;
+        font-size: 1rem;
+        font-weight:500;
+        font-family: "Poppins", sans-serif;
+        color:#4a4a4a;
+    }
+
+    .textLogin h1{
+        font-size: 1.2rem;
+    }
+    
+    .textLogin p{
+        font-size: .7rem;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 680px){
+
+
+    .container-circle{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: -100;
+        }
+
+    .circle{
+        width:1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 45%;
+        bottom: 300px;
+        right: inherit;
+        top: -1300px;
+      }
+
+    .textLogin{
+        position: absolute;
+        width: 60%;
+        left: 18%;
+        top: 40px;
+        text-align: center;
+        color: white;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .imgLogin{
+     display: none;
+    }
+
+    
+    form{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 280px;
+        text-align: center;
+    }    
+
+    form div span{
+        margin-top: 20px;
+        width: 5vw;
+        height: 3rem;
+        vertical-align: middle;
+        display: inline-flex;
+        background-color: #f7f7f7;
+        border-radius: 30px 0 0 30px ;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        padding: 0 2rem;
+        color:#9a9a9a;
+    }
+    
+    form input{
+        padding-left: .5rem;
+        vertical-align: middle;
+        width: 45%;
+        height: 3rem;
+        border-radius: 0 30px 30px 0 ;
+        border: none;
+        outline: none;
+        background-color: #f7f7f7;
+        font-size: 1rem;
+        font-weight:500;
+        font-family: "Poppins", sans-serif;
+        color:#4a4a4a;
+    }
+
+    .textLogin h1{
+        font-size: 1rem;
+    }
+    
+    .textLogin p{
+        font-size: .7rem;
+    }
+}
+
+
+
+
+
+@media (max-width: 254px){
+   
+    .textLogin{
+        position: absolute;
+        width: 60%;
+        top: 40px;
+        word-spacing: inherit;
+        text-align: center;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+    }
+
+}

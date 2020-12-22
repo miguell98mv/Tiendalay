@@ -1,0 +1,23 @@
+{
+    "name": "miguel/almacen",
+    "description": "Ejemplo composer",
+    "type": "project",
+    "license": "MIT",
+    "autoload": 
+    {
+        "psr-4": 
+        {
+           "Text\\": "config"
+        },
+        "files": 
+        [
+            "config/config.php",
+            "libs/database.php",
+            "router/router.php"
+        ],
+        "classmap":
+        [
+            "libs/"
+        ]
+    }
+}
