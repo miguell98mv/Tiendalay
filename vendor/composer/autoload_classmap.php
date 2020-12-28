@@ -11,5 +11,4 @@ return array(
     'Database' => $baseDir . '/libs/database.php',
     'Model' => $baseDir . '/libs/model.php',
     'View' => $baseDir . '/libs/view.php',
-    'getData' => $baseDir . '/model/datosObtenidos.php',
 );

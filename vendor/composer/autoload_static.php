@@ -32,7 +32,6 @@ class ComposerStaticInitc61820a7fe790b43698ae6c016c75579
         'Database' => __DIR__ . '/../..' . '/libs/database.php',
         'Model' => __DIR__ . '/../..' . '/libs/model.php',
         'View' => __DIR__ . '/../..' . '/libs/view.php',
-        'getData' => __DIR__ . '/../..' . '/model/datosObtenidos.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

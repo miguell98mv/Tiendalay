@@ -1,6 +1,6 @@
 <?php
 
-define('URL', '');
+define('URL', 'http://localhost/Almacen/');
 define('HOST', 'localhost');
 define('DB', 'Almacen_Tiendalay');
 define('USER', 'root');
