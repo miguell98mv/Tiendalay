@@ -26,6 +26,23 @@ class ComposerStaticInitc61820a7fe790b43698ae6c016c75579
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'I' => 
+        array (
+            'Imagine' => 
+            array (
+                0 => __DIR__ . '/..' . '/imagine/imagine/lib',
+            ),
+        ),
+        'E' => 
+        array (
+            'EscapeWork\\Resize' => 
+            array (
+                0 => __DIR__ . '/..' . '/escapework/resize/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Controller' => __DIR__ . '/../..' . '/libs/controller.php',
@@ -39,6 +56,7 @@ class ComposerStaticInitc61820a7fe790b43698ae6c016c75579
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitc61820a7fe790b43698ae6c016c75579::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc61820a7fe790b43698ae6c016c75579::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc61820a7fe790b43698ae6c016c75579::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitc61820a7fe790b43698ae6c016c75579::$classMap;
 
         }, null, ClassLoader::class);

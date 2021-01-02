@@ -1,8 +1,10 @@
 <?php
 
+
 if(isset($_POST['emailLogin'])){
-require 'controller/administrador/adminSession.php';
+require 'controller/administrador/adminSessionController.php';
 }
+if(!isset($_SESSION['email'])){session_start();}
 
 $url =  isset($_REQUEST['url']) ? $_REQUEST['url'] : null;
 
@@ -35,5 +37,5 @@ if(!empty($url[0]))
 
 if(sizeof($url)==2)
 {
-    sizeof($url) > 1 ? print_r($url[1]) : false;
+    
 }

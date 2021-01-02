@@ -2,10 +2,9 @@
 
 require '../../libs/require.php';
 
-class login extends Controller{
+class login{
     function __construct()
     {
-        parent::__construct();
         require '../../model/administradorModel/administradorModel.php';
         $this->model = new LoginAdminModel;
     }

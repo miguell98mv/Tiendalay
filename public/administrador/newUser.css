@@ -152,6 +152,10 @@ border-bottom: rgb(255, 94, 94) 2px solid;
 border-right: rgb(255, 94, 94) 2px solid;
 }
 
+.empty::placeholder{
+    color:rgb(255, 94, 94);
+}
+
 .emptySpan{
 border-top:rgb(255, 94, 94) 2px solid;
 border-bottom: rgb(255, 94, 94) 2px solid;

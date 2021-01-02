@@ -28,7 +28,7 @@ function login(){
 
     if(!error){
         let formulario = {email:email.value, password:password.value};
-        $.post('controller/administrador/loginAdmin.php', formulario, saluda);
+        $.post('controller/administrador/loginAdminController.php', formulario, saluda);
     }
 }
 
