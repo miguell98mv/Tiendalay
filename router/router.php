@@ -30,12 +30,13 @@ if(!empty($url[0]))
         $controller->loadView($url);
     }else{
     if(sizeof($url)==1){
-        require 'view/404/404.php';
+        require_once 'view/404/404.php';
         }
     }    
 }
 
-if(sizeof($url)==2)
+if(sizeof($url)>2)
 {
-    
+    require_once 'view/404/404.php';
+    return false;
 }

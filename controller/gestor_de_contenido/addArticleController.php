@@ -1,6 +1,6 @@
 <?php
 
-require '../../libs/require.php';
+require_once '../../libs/require.php';
 
 class AddArticle{
     function __construct()
@@ -19,8 +19,15 @@ $keyImage = $hash1.$hash2.$hash3;
 $keyImage = str_replace('/', 'o', $keyImage);
 $keyImage = $keyImage.$_FILES["photo"]["name"];
 
+$name=$_POST['name'];
+$price=$_POST['price'];
+$cost=$_POST['cost'];
+$description=$_POST['description'];
+$category=$_POST['category'];
+$labelSelection=$_POST['labelSelection'];
+
 if(move_uploaded_file($_FILES["photo"]["tmp_name"] , '../../assets/imagen_article/'.$keyImage)){
-    $validar = $AddArticle->model->addArticle($_POST['name'], $_POST['price'], $_POST['cost'], $_POST['description'],$keyImage);
+    $validar = $AddArticle->model->addArticle($name, $price, $cost, $description, $keyImage, $category, $labelSelection);
     echo json_encode($validar);
 }
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <link rel="stylesheet" href='public/administrador/newUser.css'>
-    <link rel="stylesheet" href='public/inconos/inconos.css'>
+    <link rel="stylesheet" href='<?php echo URL;?>public/administrador/newUser.css'>
+    <link rel="stylesheet" href='<?php echo URL;?>public/inconos/inconos.css'>
     <title>Tiendalay</title>
 </head>
 <body>
