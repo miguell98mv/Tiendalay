@@ -28,6 +28,7 @@ font-family: "Poppins", sans-serif;
     height: fit-content;
     position: relative;
     left: 20vw;
+    padding-top: 30px;
 }
 
 .menu_horizontal a{
@@ -37,9 +38,9 @@ font-family: "Poppins", sans-serif;
     color: white;
     padding: 20px 0;
     padding-left: 50px;
-    display: block;
+    display: flex;
     font-weight: 400;
-    border-bottom: 3px solid #2a5196 ;
+    border-bottom: 1px solid #4a4a4a;
 }
 
 .menu_horizontal a:hover{
@@ -51,195 +52,4 @@ font-family: "Poppins", sans-serif;
 .menu_horizontal .selection{
     color:#4a4a4a;
     background-color: #4da967;
-}
-
-.content h1{
-    color:#4a4a4a;
-    position:relative;
-    left: 5%;
-    top: 5%;
-}
-
-.add{
-    position:relative;
-    top: 5%;
-    left: 5%;
-    width: 60vmax;
-}
-
-input{
-    padding-left: 2rem;
-    vertical-align: middle;
-    width: 23vw;
-    height: 3vmax;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background-color: #f7f7f7;
-    font-size: 1rem;
-    font-weight:500;
-    font-family: "Poppins", sans-serif;
-    color:#4a4a4a;
-    margin: 0 10px 10px 0;
-}
-
-input[name='añadir']{
-    position: relative;
-    padding-left: 0;
-    vertical-align: middle;
-    width: 10vw;
-    height: 3vmax;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background-color: #396fcc;
-    font-size: 1rem;
-    font-weight:500;
-    font-family: "Poppins", sans-serif;
-    color:white;
-    margin: 10px 0;
-}
-
-.empty{
-    border:rgb(255, 94, 94) 2px solid;
-}
-
-input::placeholder{
-    color:#9a9a9a;
-}
-
-.empty::placeholder{
-    color:rgb(255, 94, 94);
-}
-
-.add div{
-    display: inline-block;
-    left: 10%;
-    width: 60vmax;
-}
-
-.add div div{
-    display: inline-flex;
-    width: fit-content;
-    margin: 0 10px 0 0;
-}
-
-.optionSelect{
-    width: 100px;
-    display: inline-flex;
-}
-
-select{
-    border-radius: 10px;
-    outline: none;
-    width: 150px;
-    height: 30px;
-    padding-left: 10px;
-}
-
-select option{
-outline: none;
-}
-
-#añadir:hover, #loadFileXml:hover{
-    cursor: pointer;
-    background-color: #199fcc;
-}
-
-#loadFileXml{
-    padding-left: 0rem;
-    vertical-align: middle;
-    width: 10vw;
-    border-radius: 10px;
-    height: 3vmax;
-    border: none;
-    outline: none;
-    background-color: #396fcc;
-    font-size: 1rem;
-    font-weight:500;
-    font-family: "Poppins", sans-serif;
-    color:white;
-    margin: 0 10px 0 0;
-}
-
-.error{
-    color:#4a4a4a;
-    position:relative;
-    left: 5%;
-    top: 5%;
-    color: rgb(255, 94, 94);
-    margin-bottom: 10px;
-}
-
-.true{
-    color:#4a4a4a;
-    position:relative;
-    left: 5%;
-    top: 5%;
-    color: rgb(71, 218, 103);
-    margin-bottom: 10px;
-}
-
-#getContainer{
-    color:#4a4a4a;
-    position:relative;
-    left: 5%;
-    top: 20px;
-    margin-bottom: 10px;   
-}
-
-table{
-    border-collapse: collapse;
-}
-
-
-th{
-    padding: 15px;
-}
-td{
-    padding: 15px;
-}
-
-tr:nth-child(even){
-    background-color: #d2e2ff;
-
-}
-
-tr:nth-child(1){
-    border-top: 1px black solid;
-    background-color: rgb(71, 218, 103);
-}
-
-tr:last-child{
-    border-bottom: 1px #4a4a4a solid;
-}
-
-td:last-child, th:last-child{
-    border-right: 1px #4a4a4a solid;
-}
-
-td:nth-child(1), th:nth-child(1){
-    border-left: 1px #4a4a4a solid;
-}
-
-.eliminar, .editar{
-    padding-left: 0;
-    vertical-align: middle;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background-color:none;
-    background: none;
-    font-size: 1rem;
-    font-weight:500;
-    font-family: "Poppins", sans-serif;
-    color: #396fcc;
-    margin: 0;
-}
-
-.eliminar:hover, .editar:hover{
-    color: #4da967;
-    cursor: pointer;
 }

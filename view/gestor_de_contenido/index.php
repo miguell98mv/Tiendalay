@@ -21,17 +21,34 @@
     <div class="content">
 
         <?php 
-        if($_SERVER['REQUEST_URI']==='/Almacen/administrador' || $_SERVER['REQUEST_URI']==='/Almacen/administrador/contenido'){
-        require 'view/gestor_de_contenido/contenido.php';  
+        if(!isset($url[1]) && $url[0]==='administrador' || $_SERVER['REQUEST_URI']==='/Almacen/administrador/contenido'){
+            require 'view/gestor_de_contenido/contenido.php';
+            return false;
         }
 
-        if(isset($url[2]) && $url[2]==='edit'){
-        require 'view/gestor_de_contenido/edit.php';  
+        if(isset($url[1]) && $url[1]==='categorias'){
+            require 'view/gestor_de_contenido/categorias.php';
+            return false;
         }
+
+        if(isset($url[2])){
+         
+            if(is_numeric($url[2])){
+                require 'view/gestor_de_contenido/contenido.php';
+                return false;
+            }
+        }
+
+        if(isset($url[2]) && $url[1].$url[2]==='contenidoedit'){
+            if(isset($url[3])){
+            require 'view/gestor_de_contenido/edit.php';
+            return false;
+            }
+            }
+
         ?>
 
     </div>
 </div>
-<script src="<?php echo URL?>public/gestor_de_contenido/gestor_de_contenido.js"></script>
 </body>
 </html>

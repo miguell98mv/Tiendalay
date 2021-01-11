@@ -12,5 +12,5 @@ class GetArticle{
 
 $GetArticle = new GetArticle;
 
-$data = json_encode($GetArticle->model->getArticle());
+$data = json_encode($GetArticle->model->getArticle($_POST['urlName']));
 echo $data;

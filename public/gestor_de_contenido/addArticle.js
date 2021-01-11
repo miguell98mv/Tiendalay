@@ -8,12 +8,18 @@ const placeholderText = [articulo.placeholder, descripcion.placeholder, precio.p
 const tableArticles = document.querySelector('#tableArticles tbody');
 const category = document.getElementById('category');
 const labelSelection = document.getElementById('labelSelection');
+const pagination = document.getElementById('paginacion');
 var error;
+
+if(document.formulario.urlname.value && !isNaN(document.formulario.urlname.value)){
+    var urlName = parseInt(document.formulario.urlname.value);
+}else{
+    var urlName = 1;
+}
 
 
 
 //EVENTOS
-
 window.onload = getArticles;
 
 document.formulario.añadir.addEventListener('click', function(){
@@ -103,6 +109,7 @@ function validate(){
 }
 
 
+
 function removeClass(myInput, e){
     myInput.placeholder = placeholderText[e]; 
     myInput.classList.remove("empty");   
@@ -114,6 +121,7 @@ function addClass(myInput){
     myInput.classList.add("empty"); 
     error=true;
 }
+
 
 
 function getData(data){
@@ -140,9 +148,11 @@ function getData(data){
 
 function getArticles(){
     const http = new XMLHttpRequest;
-
+     let formData = new FormData;
+     
+    formData.append('urlName', urlName);
     http.open('POST', MYURL+'controller/gestor_de_contenido/getArticleController.php');
-    http.send();
+    http.send(formData);
     http.onreadystatechange = function(){
         if(this.readyState === 4 && this.status === 200){
             viewData(http.responseText);
@@ -158,45 +168,84 @@ function viewData(data){
     });
 
     data = JSON.parse(data);
-
-    data.forEach(e => {
-        var newTr = document.createElement("tr");
-        var newTds = [];
+    let totalPaginas = data[data.length-1];
+    data.pop();
+    
+    if(data){
+        data.forEach(e => {
+            
+            var newTr = document.createElement("tr");
+            var newTds = [];
         
-        var dataSetArticle = document.createElement('input');
-        dataSetArticle.setAttribute('type', 'button');
-        dataSetArticle.setAttribute('value', 'Eliminar');
-        dataSetArticle.setAttribute('class', 'eliminar');
-        dataSetArticle.setAttribute('data-value', e.id);
+            var dataSetArticle = document.createElement('input');
+            dataSetArticle.setAttribute('type', 'button');
+            dataSetArticle.setAttribute('value', 'Eliminar');
+            dataSetArticle.setAttribute('class', 'eliminar');
+            dataSetArticle.setAttribute('data-value', e.id);
 
-        var dataEditArticle = document.createElement('input');
-        dataEditArticle.setAttribute('type', 'button');
-        dataEditArticle.setAttribute('href', 'button');
-        dataEditArticle.setAttribute('value', 'Editar');
-        dataEditArticle.setAttribute('class', 'editar');
+            var dataEditArticle = document.createElement('input');
+            dataEditArticle.setAttribute('type', 'button');
+            dataEditArticle.setAttribute('onclick', `ir(${e.id})`);
+            dataEditArticle.setAttribute('value', 'Editar');
+            dataEditArticle.setAttribute('class', 'editar');
         
 
-        while(newTds.length < 8){ 
-            newTds.push(document.createElement("td")); 
+            while(newTds.length < 8){ 
+                newTds.push(document.createElement("td")); 
+            }
+        
+            for(let a=0; a<8; a++){
+                tableArticles.append(newTr);
+                newTr.append(newTds[a]);
+            }
+
+            newTds[0].append(e.name);
+            newTds[1].append(e.price);
+            newTds[2].append(e.cost);
+            newTds[3].append(e.description);
+            newTds[4].append(e.category);
+            newTds[5].append(e.label);
+            newTds[6].append(dataEditArticle);
+            newTds[7].append(dataSetArticle);
+        });
+
+        switch(urlName){
+
+            case 1:case 2:case 3:
+                var inicioPagination = 1;
+                var finPagination = 5;
+            break;
+
+            case totalPaginas:case totalPaginas-1:
+                var inicioPagination = totalPaginas-4;
+                var finPagination = totalPaginas;
+            break;
+
+            default:
+                var inicioPagination = urlName-2;
+                var finPagination = urlName+2;
+            break;
+
         }
         
-        for(let a=0; a<8; a++){
-            tableArticles.append(newTr);
-            newTr.append(newTds[a]);
-        }
+        pagination.innerHTML = '';
+        for(let a=inicioPagination; a<=finPagination; a++){
 
-        newTds[0].append(e.name);
-        newTds[1].append(e.price);
-        newTds[2].append(e.cost);
-        newTds[3].append(e.description);
-        newTds[4].append(e.category);
-        newTds[5].append(e.label);
-        newTds[6].append(dataEditArticle);
-        newTds[7].append(dataSetArticle);
-    });
+            if(a>0 && a<totalPaginas+1){
+                let boxPagination = document.createElement('a');
+                boxPagination.append(a);
+                boxPagination.setAttribute('href', `${MYURL}administrador/contenido/${a}`);
+
+                if(urlName===a){
+                    boxPagination.setAttribute('id', 'selectionHref');
+                }
+
+                pagination.append(boxPagination);
+            }
+        }
+    }
     eliminar();
 }
-
 
 function eliminar(){
     let eventClick = document.getElementsByClassName('eliminar');
@@ -219,3 +268,5 @@ function eliminar(){
         });
     }
 }
+
+function ir(id){window.location.href = `${MYURL}administrador/contenido/edit/${id}`}

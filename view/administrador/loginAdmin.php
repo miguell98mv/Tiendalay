@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href='<?php echo URL;?>public/administrador/newUser.css'>
     <link rel="stylesheet" href='<?php echo URL;?>public/inconos/inconos.css'>
-    <script src="public/jquery/jquery-3.4.1.min.js"></script>
+    <script src="<?php echo URL;?>public/jquery/jquery-3.4.1.min.js"></script>
     <title>Tiendalay</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
         </div>
         </section>
 
-        <form action="<?php echo URL ?>administrador" method="post" name="formulario">
+        <form action="<?php echo URL ?>administrador" method="post" name="formulario" id="formulario">
             <h1>Iniciar Sesion</h1>
             <div id="error"></div>
             <div><span class="icon-mail2"></span><input type="text" id='email' name='email' placeholder="Email"></div>
@@ -31,8 +31,9 @@
             <input type="hidden" name="userLogin">
             <input type="hidden" name="passwordLogin">
             <input type="button" name="botom" value="Iniciar sesion">
+            <input type="reset" id="reset" value="" hidden>
         </form>  
     </div>
-    <script src="public/administrador/loginAdmin.js"></script>
+    <script src="<?php echo URL;?>public/administrador/loginAdmin.js"></script>
 </body>
 </html>

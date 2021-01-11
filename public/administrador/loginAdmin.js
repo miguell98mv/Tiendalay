@@ -28,7 +28,7 @@ function login(){
 
     if(!error){
         let formulario = {email:email.value, password:password.value};
-        $.post('controller/administrador/loginAdminController.php', formulario, saluda);
+        $.post(MYURL+'controller/administrador/loginAdminController.php', formulario, saluda);
     }
 }
 
@@ -44,6 +44,8 @@ function saluda(datos){
         
         father.innerHTML = "<p>La contraseña o el email es incorrecto!</p>";
     }else{
+        password.value = '*****************';
+        passwordLogin.value = '*****************';
         document.formulario.submit();
     }
 }
