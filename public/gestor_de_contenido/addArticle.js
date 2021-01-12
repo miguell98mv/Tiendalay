@@ -9,6 +9,8 @@ const tableArticles = document.querySelector('#tableArticles tbody');
 const category = document.getElementById('category');
 const labelSelection = document.getElementById('labelSelection');
 const pagination = document.getElementById('paginacion');
+const selectionCategory = document.getElementById('category');
+
 var error;
 
 if(document.formulario.urlname.value && !isNaN(document.formulario.urlname.value)){
@@ -20,6 +22,7 @@ if(document.formulario.urlname.value && !isNaN(document.formulario.urlname.value
 
 
 //EVENTOS
+
 window.onload = getArticles;
 
 document.formulario.añadir.addEventListener('click', function(){
@@ -147,6 +150,7 @@ function getData(data){
 }
 
 function getArticles(){
+    getSelectionCategory();
     const http = new XMLHttpRequest;
      let formData = new FormData;
      
@@ -270,3 +274,29 @@ function eliminar(){
 }
 
 function ir(id){window.location.href = `${MYURL}administrador/contenido/edit/${id}`}
+
+
+function getSelectionCategory(){
+
+    const http = new XMLHttpRequest;
+
+    http.open('post', MYURL+'controller/gestor_de_contenido/getSelectionCategory.php');
+    http.send();
+
+    http.onreadystatechange = function (){
+        if(http.readyState === 4 && http.status === 200){
+            setSelection(this.responseText);
+        }
+    }
+}
+
+function setSelection(data){
+
+    data = JSON.parse(data);
+
+    data.forEach(e =>{
+        let setOption = document.createElement('option');
+        setOption.append(e);
+        selectionCategory.append(setOption);
+    });
+}

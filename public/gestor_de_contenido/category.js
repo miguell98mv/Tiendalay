@@ -71,10 +71,13 @@ function addCategory(data){
     var data = JSON.parse(data);
 
     if(data.validate){
+        category.value = '';
+        descripcion.value = '';
         mensaje.classList.remove('error');
         mensaje.innerHTML = "";
         mensaje.classList.add('true');
         mensaje.innerHTML = "Se añadio una categoria con exito";
+        getArticles();
     }else{
         mensaje.classList.remove('true');
         mensaje.innerHTML = "";
@@ -202,3 +205,5 @@ function eliminar(){
         });
     }
 }
+
+function ir(id){window.location.href = `${MYURL}administrador/categorias/edit/${id}`}

@@ -11,7 +11,7 @@
 <body>
 <div class="container">
     <nav class="menu_horizontal">
-    <a href=""><span class="icon-home" style="margin-right: 10px;"></span>Escritorio</a>
+    <a  onclick="window.location.href = MYURL"><span class="icon-home" style="margin-right: 10px;"></span>Escritorio</a>
     <a id="contenido" href="<?php echo URL?>administrador/contenido"><span class="icon-mail2" style="margin-right: 10px;"></span>Contenido</a>
     <a id="categorias" href="<?php echo URL?>administrador/categorias"><span class="icon-pushpin" style="margin-right: 10px;"></span>Categorias</a>
     <a id="ventas" href="<?php echo URL?>administrador/ventas"><span class="icon-cart" style="margin-right: 10px;"></span>Ventas</a>
@@ -21,6 +21,37 @@
     <div class="content">
 
         <?php 
+
+    if(isset($url[2]) && $url[1].$url[2]==='contenidoedit'){
+        if(isset($url[3])){
+        require 'view/gestor_de_contenido/edit.php';
+        return false;
+        }
+    }
+
+    if(isset($url[2]) && $url[1].$url[2]==='categoriasedit'){
+        if(isset($url[3])){
+        require 'view/gestor_de_contenido/editCategory.php';
+        return false;
+        }
+    }
+
+    if(isset($url[2]) && $url[1]==='contenido'){
+         
+        if(is_numeric($url[2])){
+            require 'view/gestor_de_contenido/contenido.php';
+            return false;
+        }
+    }
+
+        if(isset($url[2]) && $url[1]==='contenido'){
+         
+        if(is_numeric($url[2])){
+            require 'view/gestor_de_contenido/contenido.php';
+            return false;
+        }
+    }
+    
         if(!isset($url[1]) && $url[0]==='administrador' || $_SERVER['REQUEST_URI']==='/Almacen/administrador/contenido'){
             require 'view/gestor_de_contenido/contenido.php';
             return false;
@@ -30,21 +61,6 @@
             require 'view/gestor_de_contenido/categorias.php';
             return false;
         }
-
-        if(isset($url[2])){
-         
-            if(is_numeric($url[2])){
-                require 'view/gestor_de_contenido/contenido.php';
-                return false;
-            }
-        }
-
-        if(isset($url[2]) && $url[1].$url[2]==='contenidoedit'){
-            if(isset($url[3])){
-            require 'view/gestor_de_contenido/edit.php';
-            return false;
-            }
-            }
 
         ?>
 

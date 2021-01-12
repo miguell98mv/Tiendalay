@@ -12,7 +12,7 @@
     position:relative;
     top: 5%;
     left: 5%;
-    width: 60vmax;
+    width: 70vmax;
     display: flex;
     flex-wrap: wrap;
 }
@@ -92,12 +92,11 @@ input::placeholder{
 }
 
 .conte1{
-    width: 50%;
+    width: 40%;
 }
 
 .conte2{
-    width: 50%;
-    margin-left: -5%;
+    width: 60%;
 }
 
 .add div div{

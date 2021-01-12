@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="<?php echo URL?>public/gestor_de_contenido/content.css">
+<script src="<?php echo URL?>public/gestor_de_contenido/gestor_de_contenido.js"></script>
+
+
 <h1>Añadir articulo</h1>
 <p id="mensaje"></p>
 <form class="add" method="POST" name="formulario" id="formulario">
@@ -11,9 +14,6 @@
             <div class="optionSelect">
                 <select id="category">
                     <option>Categoria</option>
-                    <option>Automil</option>
-                    <option>Electrodomestico</option>
-                    <option>Tegnologia</option>
                 </select>
             </div>
             <div class="optionSelect">
@@ -52,5 +52,5 @@
 </div>
 <div id="paginacion"></div>
 
-<script src="<?php echo URL?>public/gestor_de_contenido/gestor_de_contenido.js"></script>
+
 <script src="<?php echo URL?>public/gestor_de_contenido/addArticle.js"></script>

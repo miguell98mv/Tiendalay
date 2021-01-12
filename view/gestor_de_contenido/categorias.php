@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?php echo URL?>public/gestor_de_contenido/category.css">
-
+<script src="<?php echo URL?>public/gestor_de_contenido/gestor_de_contenido.js"></script>
 
 
 <h1>Añadir Categoria</h1>
@@ -28,5 +28,4 @@
 </form>
 
 
-<script src="<?php echo URL?>public/gestor_de_contenido/gestor_de_contenido.js"></script>
 <script src="<?php echo URL?>public/gestor_de_contenido/category.js"></script>
