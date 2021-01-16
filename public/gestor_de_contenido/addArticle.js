@@ -4,12 +4,13 @@ const descripcion = document.formulario.descripcion;
 const precio = document.formulario.precio;
 const costo = document.formulario.costo;
 const errorImage = document.getElementById('mensaje');
-const placeholderText = [articulo.placeholder, descripcion.placeholder, precio.placeholder, costo.placeholder];
 const tableArticles = document.querySelector('#tableArticles tbody');
 const category = document.getElementById('category');
-const labelSelection = document.getElementById('labelSelection');
+const labelSelection = document.getElementById('label');
 const pagination = document.getElementById('paginacion');
 const selectionCategory = document.getElementById('category');
+const placeholderText = [labelSelection.placeholder ,articulo.placeholder, descripcion.placeholder, precio.placeholder, costo.placeholder];
+
 
 var error;
 
@@ -58,7 +59,7 @@ function validate(){
 
     let photo = document.getElementById("filee").files[0];
     error = false;
-    const inputs = [articulo, descripcion, precio, costo];
+    const inputs = [articulo, descripcion, precio, costo, labelSelection];
     
     for(let e in inputs){
         inputs[e].addEventListener('focus', function(){ removeClass(this, e) });
@@ -137,6 +138,7 @@ function getData(data){
         costo.value='';
         descripcion.value='';
         precio.value='';
+        labelSelection.value='';
         errorImage.classList.add('true');
         errorImage.innerHTML = "Se añadio un nuevo articulo con exito";
         getArticles();
@@ -209,7 +211,9 @@ function viewData(data){
             newTds[3].append(e.description);
             newTds[4].append(e.category);
             newTds[5].append(e.label);
+            newTds[6].classList.add('quitarPadding');
             newTds[6].append(dataEditArticle);
+            newTds[7].classList.add('quitarPadding');
             newTds[7].append(dataSetArticle);
         });
 

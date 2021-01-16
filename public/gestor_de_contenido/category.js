@@ -141,7 +141,9 @@ function viewData(data){
 
             newTds[0].append(e.Category);
             newTds[1].append(e.Description);
+            newTds[2].classList.add('quitarPadding');
             newTds[2].append(dataEditCategory);
+            newTds[3].classList.add('quitarPadding');
             newTds[3].append(dataSetCategory);
         });
 

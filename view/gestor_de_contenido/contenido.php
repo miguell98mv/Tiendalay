@@ -12,16 +12,11 @@
         <input type="text" alt="Costo" name="costo" placeholder="Costo">
         <div>
             <div class="optionSelect">
-                <select id="category">
-                    <option>Categoria</option>
-                </select>
+                <input id="label" type="text" placeholder="Etiqueta">
             </div>
             <div class="optionSelect">
-                <select id="labelSelection">
-                    <option>Etiqueta</option>
-                    <option>Automil</option>
-                    <option>Electrodomestico</option>
-                    <option>Tegnologia</option>
+                <select id="category">
+                    <option>Categoria</option>
                 </select>
             </div>
         </div>

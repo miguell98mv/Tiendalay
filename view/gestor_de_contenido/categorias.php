@@ -16,8 +16,8 @@
     <div id="getContainer">
     <table id="tableCategory">
         <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
+            <th>Categoria</th>
+            <th>Descripcion</th>
             <th>Editar</th>
             <th>Eliminar</th>
         </tr>

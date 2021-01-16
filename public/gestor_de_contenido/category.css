@@ -3,8 +3,8 @@
     position:relative;
     left: 5%;
     top: 5%;
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
@@ -19,60 +19,58 @@
 
 input{
     display: block;
-    padding-left: 2rem;
+    padding-left: 1vmax;
     width: 22vmax;
     height: 40px;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight:500;
     font-family: "Poppins", sans-serif;
     color:#4a4a4a;
-    border: 1px rgb(175, 175, 175) solid;
-    box-shadow: 1px 2px 2px rgb(226, 226, 226);
+    border: 1px solid rgb(175, 175, 175);
     margin: 0 10px 10px 0;
+    box-shadow: 1px 2px 2px rgb(226, 226, 226);
 }
 
 input[name='añadir']{
     position: relative;
     padding-left: 0;
     vertical-align: middle;
-    width: 10vmax;
-    height: 3vmax;
+    width: 100px;
+    height: 40px;
     border-radius: 10px;
     border: none;
     outline: none;
-    background-color: #396fcc;
+    background-color: #037ef3;
     font-size: 1rem;
     font-weight:500;
     font-family: "Poppins", sans-serif;
     color:white;
-    box-shadow: 1px 2px 2px rgb(226, 226, 226);
     margin: 10px 0;
+    box-shadow: 1px 2px 2px rgb(226, 226, 226);
 }
 
 #añadir:hover{
     cursor: pointer;
-    background-color: #199fcc;
+    background-color: #037ef3;
 }
 
 textarea{
-    color:#4a4a4a;
-    position: relative;
-    font-size: 1rem;
+    display: block;
+    padding-left: 1vmax;
+    width: 22vmax;
+    height: 140px;
+    border: none;
+    outline: none;
+    font-size: .9rem;
     font-weight:500;
     font-family: "Poppins", sans-serif;
-    height: 140px;
-    width: 22vmax;
-    size: none;
-    resize: none;
-    left: 0%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: .5rem;
-    border: 1px rgb(175, 175, 175) solid;
+    color:#4a4a4a;
+    border: 1px solid rgb(175, 175, 175);
+    margin: 0 10px 10px 0;
     box-shadow: 1px 2px 2px rgb(226, 226, 226);
-    outline: none;
+    resize: none;
 }
 
 textarea::placeholder{
@@ -97,30 +95,33 @@ input::placeholder{
 
 .conte2{
     width: 60%;
+    margin-left: -5%;
 }
 
 .add div div{
-    display: inline-flex;
-    width: fit-content;
-    margin: 0 10px 0 0;
+    width: 100%;
+    color:#4a4a4a;
+    position:relative;
+    left: 5%;
+    margin-bottom: 10px; 
 }
 
 table{
-    box-shadow: 1px 2px 2px rgb(226, 226, 226);
     border-collapse: collapse;
+    box-shadow: 1px 3px 2px rgb(226, 226, 226);
 }
 
 
 th{
-    width: 130px;
-    padding: 15px;
+    font-size: .8rem;
+    padding: 1vmax;
 }
 
 td{
-    width: 130px;
-    padding: 15px 0;
-    padding-left: 15px;
-    font-size: .9rem;
+    width: 9vmax;
+    padding: 1vmax 0;
+    padding-left: 1vmax;
+    font-size: .8rem;
 }
 
 tr:nth-child(even){
@@ -129,8 +130,8 @@ tr:nth-child(even){
 }
 
 tr:nth-child(1){
-    border-top: 1px rgb(175, 175, 175);
-    background-color: rgb(71, 218, 103);
+    border-top: 1px rgb(175, 175, 175) solid;
+    background-color: #f85a40;
 }
 
 tr:last-child{
@@ -155,22 +156,24 @@ td:nth-child(1), th:nth-child(1){
     outline: none;
     background-color:none;
     background: none;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight:500;
     font-family: "Poppins", sans-serif;
-    color: #396fcc;
-    margin: 0;
+    color:#037ef3;
+    margin: auto;
+    box-shadow: none;
 }
 
 .eliminar:hover, .editar:hover{
-    color: #4da967;
+    color: #f85a40;
     cursor: pointer;
 }
 
 #paginacion{
     width: 80%;
     height: 40px;
-    margin: 60px 0;
+    margin: 40px 0;
+    margin-top: 20px;
     margin-left: 10%;
     display: block;
     overflow: hidden;
@@ -185,7 +188,7 @@ td:nth-child(1), th:nth-child(1){
     font-weight: 500;
     border-radius: 5px;
     color: white;
-    background-color: #396fcc;
+    background-color: #037ef3;
     margin:0 10px;
     display: inline-flex;
     align-items: center;
@@ -198,11 +201,11 @@ td:nth-child(1), th:nth-child(1){
 }
 
 #selectionHref{
-    background-color: #4da967 !important ;
+    background-color: #f85a40 !important ;
 }
 
 #paginacion a:hover{
-    background-color: #4da967;
+    background-color: #f85a40;
 }
 
 .error{
@@ -219,29 +222,89 @@ td:nth-child(1), th:nth-child(1){
     position:relative;
     left: 5%;
     top: 5%;
-    color: rgb(71, 218, 103);
+    color: #9F3BD9;
     margin-bottom: 10px;
 }
 
-.eliminar, .editar{
+.quitarPadding{
     padding-left: 0;
-    vertical-align: middle;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background-color:none;
-    background: none;
-    font-size: 1rem;
-    font-weight:500;
-    font-family: "Poppins", sans-serif;
-    color: #396fcc;
-    margin: 0;
-    box-shadow: none;
 }
 
-.eliminar:hover, .editar:hover{
-    color: #4da967;
-    cursor: pointer;
+
+@media (max-width: 600px){
+
+
+    .conte1{
+        width: 90%;
+    }
+    
+    .conte2{
+        width: 90%;
+        margin-top: 20px;
+        margin-left: -5%;
+    }
+
+    input{
+        width: 35vmax;
+    }
+    
+    
+    textarea{
+        width: 35vmax;
+    }
+    
+    .add{
+        width: 100vw;
+    }
+
+    .add div div{
+        overflow-x: scroll;
+    }
+
+    #paginacion{
+        width: 50%;
+        height: 40px;
+        margin: 40px 0;
+        margin-top: 20px;
+        margin-left: 10%;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    
+#paginacion a{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    width: 30px;
+    height: 30px
+    }
+    
+}
+
+@media (max-width: 680px){
+
+    #getContainer{
+        width: 90vw;
+    }
+
+    input[name='añadir']{
+        width: 80px;
+        height: 30px;
+        font-size: .8rem;
+    }
+
+    #loadFileXml{
+        width: 110px;
+        height: 30px;
+        font-size: .8rem;
+    }
+
+    #paginacion a{
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        width: 30px;
+        height: 30px
+        }
+    
 }

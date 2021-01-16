@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="<?php echo URL?>public/gestor_de_contenido/gestor_de_contenido.css">
     <link rel="stylesheet" href='<?php echo URL?>public/inconos/inconos.css'>
     <script src="<?php echo URL?>public/jquery/jquery-3.4.1.min.js"></script>
-    <title>Document</title>
+    <title>TiendaLay</title>
 </head>
 <body>
 <div class="container">
+    <nav id="menuResponsi"><span class='icon-menu' id="spanMenuBoton"></span></nav>
     <nav class="menu_horizontal">
-    <a  onclick="window.location.href = MYURL"><span class="icon-home" style="margin-right: 10px;"></span>Escritorio</a>
-    <a id="contenido" href="<?php echo URL?>administrador/contenido"><span class="icon-mail2" style="margin-right: 10px;"></span>Contenido</a>
-    <a id="categorias" href="<?php echo URL?>administrador/categorias"><span class="icon-pushpin" style="margin-right: 10px;"></span>Categorias</a>
-    <a id="ventas" href="<?php echo URL?>administrador/ventas"><span class="icon-cart" style="margin-right: 10px;"></span>Ventas</a>
-    <a id="salir"><span class="icon-exit" style="margin-right: 10px;"></span>Salir</a>
+    <a  onclick="window.location.href = MYURL"><span class="icon-home spanMenu"></span>Escritorio</a>
+    <a id="contenido" href="<?php echo URL?>administrador/contenido"><span class="icon-mail2 spanMenu"></span>Contenido</a>
+    <a id="categorias" href="<?php echo URL?>administrador/categorias"><span class="icon-pushpin spanMenu"></span>Categorias</a>
+    <a id="ventas" href="<?php echo URL?>administrador/ventas"><span class="icon-cart spanMenu"></span>Ventas</a>
+    <a id="salir"><span class="icon-exit spanMenu"></span>Salir</a>
     </nav>
     <input type="hidden" id="url" value="<?php if(isset($url[1])){echo $url[1];} ?>">
-    <div class="content">
+    <div class="content ">
 
         <?php 
 
