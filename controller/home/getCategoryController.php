@@ -13,9 +13,3 @@ class GetCategoryController{
 
 $GetCategory = new GetCategoryController;
 
-$GetCategory = $GetCategory->model->getCategory();
-
-foreach($GetCategory as $e){
-
-    echo '<p class="categorias">'.$e.'</p>';
-}

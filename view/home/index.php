@@ -17,7 +17,10 @@
     </div>
     <div class='menuContainer2'>
         <nav id="menuSecundario">
-            <?php require_once 'controller/home/getCategoryController.php'; ?>
+            <?php 
+            require_once 'controller/home/getCategoryController.php'; 
+            $GetCategory->model->getCategory();
+            ?>
         </nav>
     </div>
 
@@ -31,7 +34,10 @@
     </div>
 
     <div class='container'>
-
+        <?php 
+        require_once 'controller/home/getCategoryController.php'; 
+        $GetCategory->model->getCategoryCaja();
+        ?>
     </div>
     <script src="public/home/slider.js"></script>
 </body>

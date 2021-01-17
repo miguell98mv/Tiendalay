@@ -6,5 +6,5 @@ $db = new Database;
 ?>
 
 <script>
-    const MYURL = 'http://192.168.0.199//Almacen/';
+    const MYURL = 'http://192.168.0.199/Almacen/';
 </script>
