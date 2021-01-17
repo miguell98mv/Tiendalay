@@ -59,7 +59,7 @@ input[name='añadir']{
     border-radius: 10px;
     border: none;
     outline: none;
-    background-color: #396fcc;
+    background-color:#037ef3;
     font-size: 1rem;
     font-weight:500;
     font-family: "Poppins", sans-serif;
@@ -140,7 +140,7 @@ select option{
 
 #añadir:hover, #loadFileXml:hover{
     cursor: pointer;
-    background-color: #199fcc;
+    background-color: #f85a40;
 }
 
 #loadFileXml{
@@ -151,7 +151,7 @@ select option{
     border-radius: 10px;
     border: none;
     outline: none;
-    background-color: #396fcc;
+    background-color: #037ef3;
     font-size: 1rem;
     font-weight:500;
     font-family: "Poppins", sans-serif;
@@ -173,7 +173,7 @@ select option{
     position:relative;
     left: 5%;
     top: 5%;
-    color: #9F3BD9;
+    color: rgb(71, 218, 103);
     margin-bottom: 10px;
 }
 
@@ -211,7 +211,7 @@ tr:nth-child(even){
 
 tr:nth-child(1){
     border-top: 1px rgb(175, 175, 175) solid;
-    background-color: #9F3BD9;
+    background-color: #f85a40;
 }
 
 tr:last-child{
@@ -239,13 +239,13 @@ td:nth-child(1), th:nth-child(1){
     font-size: .8rem;
     font-weight:500;
     font-family: "Poppins", sans-serif;
-    color: #396fcc;
+    color:#037ef3;
     margin: auto;
     box-shadow: none;
 }
 
 .eliminar:hover, .editar:hover{
-    color: #9F3BD9;
+    color: #f85a40;
     cursor: pointer;
 }
 
@@ -268,7 +268,7 @@ td:nth-child(1), th:nth-child(1){
     font-weight: 500;
     border-radius: 5px;
     color: white;
-    background-color: #396fcc;
+    background-color: #037ef3;
     margin:0 10px;
     display: inline-flex;
     align-items: center;
@@ -282,11 +282,11 @@ td:nth-child(1), th:nth-child(1){
 }
 
 #selectionHref{
-    background-color:#9F3BD9 !important ;
+    background-color:#f85a40 !important ;
 }
 
 #paginacion a:hover{
-    background-color: #9F3BD9;
+    background-color: #f85a40;
 }
 
 .quitarPadding{
@@ -299,7 +299,7 @@ td:nth-child(1), th:nth-child(1){
 
     #getContainer{
         width: 70vw;  
-        overflow: scroll; 
+        overflow-x: auto; 
     }
 }
 
@@ -309,8 +309,6 @@ td:nth-child(1), th:nth-child(1){
 
     #getContainer{
         width: 90vw;
-  
-        overflow: scroll; 
     }
 
     input[name='añadir']{

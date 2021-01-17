@@ -21,8 +21,18 @@
         </nav>
     </div>
 
+    <div id="fondoTienda">
+        <div id="fondoSlider">
+            <div alt="fondo tiendalay" class='fondos' id="fondo1"></div>
+            <div alt="fondo tiendalay" class='fondos' id="fondo2"></div>
+            <div alt="fondo tiendalay" class='fondos' id="fondo3"></div>
+            <div alt="fondo tiendalay" class='fondos' id="fondo4"></div>
+        </div>
+    </div>
+
     <div class='container'>
 
     </div>
+    <script src="public/home/slider.js"></script>
 </body>
 </html>

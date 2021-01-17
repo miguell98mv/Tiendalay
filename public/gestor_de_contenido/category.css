@@ -53,7 +53,7 @@ input[name='añadir']{
 
 #añadir:hover{
     cursor: pointer;
-    background-color: #037ef3;
+    background-color: #f85a40;
 }
 
 textarea{
@@ -131,7 +131,7 @@ tr:nth-child(even){
 
 tr:nth-child(1){
     border-top: 1px rgb(175, 175, 175) solid;
-    background-color: #f85a40;
+    background-color:#f85a40;
 }
 
 tr:last-child{
@@ -222,7 +222,7 @@ td:nth-child(1), th:nth-child(1){
     position:relative;
     left: 5%;
     top: 5%;
-    color: #9F3BD9;
+    color:  rgb(71, 218, 103);
     margin-bottom: 10px;
 }
 
@@ -258,7 +258,7 @@ td:nth-child(1), th:nth-child(1){
     }
 
     .add div div{
-        overflow-x: scroll;
+        overflow-x: auto;
     }
 
     #paginacion{
