@@ -4,11 +4,11 @@ const descripcion = document.formulario.descripcion;
 const precio = document.formulario.precio;
 const costo = document.formulario.costo;
 const nameCategory = document.formulario.nameCategory;
-const nameLabel = document.formulario.nameLabel;
+const nameLabel = document.formulario.label;
 const errorImage = document.getElementById('mensaje');
 const placeholderText = [articulo.placeholder, descripcion.placeholder, precio.placeholder, costo.placeholder];
 const category = document.getElementById('category');
-const labelSelection = document.getElementById('labelSelection');
+const selectionCategory = document.getElementById('category');
 const id = document.formulario.id;
 var error;
  
@@ -19,17 +19,14 @@ for(let a=0; a<(category.options).length; a++){
     }
 }
 
-for(let a=0; a<(labelSelection.options).length; a++){
-    if(labelSelection.options[a].value === nameLabel.value){
-        labelSelection.options[a].setAttribute('selected', '');
-    }
-}
-
 
 
 
 
 //EVENTOS
+
+window.onload = getSelectionCategory;
+
 document.formulario.añadir.addEventListener('click', function(){
     validate();
 });
@@ -95,7 +92,7 @@ function validate(){
         formData.append('price', precio.value);
         formData.append('cost', costo.value);
         formData.append('category', category.value);
-        formData.append('labelSelection', labelSelection.value);
+        formData.append('labelSelection', nameLabel.value);
         formData.append('id', id.value);
 
         let http = new XMLHttpRequest();
@@ -120,4 +117,30 @@ function addClass(myInput){
     myInput.placeholder = 'Campo obligatorio';
     myInput.classList.add("empty"); 
     error=true;
+}
+
+
+function getSelectionCategory(){
+
+    const http = new XMLHttpRequest;
+
+    http.open('post', MYURL+'controller/gestor_de_contenido/getSelectionCategory.php');
+    http.send();
+
+    http.onreadystatechange = function (){
+        if(http.readyState === 4 && http.status === 200){
+            setSelection(this.responseText);
+        }
+    }
+}
+
+function setSelection(data){
+
+    data = JSON.parse(data);
+
+    data.forEach(e =>{
+        let setOption = document.createElement('option');
+        setOption.append(e);
+        selectionCategory.append(setOption);
+    });
 }

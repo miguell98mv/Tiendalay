@@ -10,7 +10,7 @@ class EditArticleModel extends Database{
     function EditArticle($name, $price, $cost, $description, $category, $label, $id, $image=null){
 
         $category = $category==='Categoria' ? 'Ninguno' : $category;
-        $label = $label==='Etiqueta' ? 'Ninguno' : $label;
+        $label = $label==='' ? 'Ninguno' : $label;
         
         if($image){
             $query = $this->connect()->prepare("UPDATE article SET name=:name, price=:price, cost=:cost, description=:description, category=:category, label=:label, image=:image WHERE id=:id");

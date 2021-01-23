@@ -124,8 +124,8 @@ function viewData(data){
             dataSetCategory.setAttribute('data-value', e.Category);
 
             var dataEditCategory = document.createElement('input');
+            dataEditCategory.setAttribute('onclick', `ir('${e.Category}')`);
             dataEditCategory.setAttribute('type', 'button');
-            dataEditCategory.setAttribute('onclick', `ir(${e.Category})`);
             dataEditCategory.setAttribute('value', 'Editar');
             dataEditCategory.setAttribute('class', 'editar');
         

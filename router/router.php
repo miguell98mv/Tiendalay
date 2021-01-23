@@ -27,6 +27,10 @@ if(sizeof($url)===2){
 
     }else if($url[1] === 'ventas'){
         
+    }else if($url[0] === 'busqueda'){
+
+    }else if($url[0] === 'categoria'){
+
     }else{
         require_once 'view/404/404.php';
         return false; 

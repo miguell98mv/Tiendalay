@@ -1,8 +1,10 @@
-var slider = document.getElementById("fondoSlider");
+const slider = document.getElementById("fondoSlider");
 
 //mover imagen al primer lugar
 //slider.firstElementChild
 
+
+//EVENTOS
 slider.lastElementChild.insertBefore = slider.firstElementChild;
 slider.style.marginLeft = "-100%";
 
