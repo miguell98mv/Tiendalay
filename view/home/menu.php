@@ -5,7 +5,19 @@
             <input type="search" name="search" id="search" autocomplete="off" placeholder="Buscar Articulo"><span class="icon-search" id="spanSearch"></span>
             <div id="searchMenu"></div>
         </div>
-        <div id="menu3"><img src="<?php echo URL?>assets/miCuneta2.png" alt="Mi cuenta"><a href="">Mi cuenta</a><span class="icon-cart" id="spanCart"></span></div>
+        <div id="menu3">
+            <img src="<?php echo URL;?>assets/miCuneta2.png" alt="Mi cuenta">
+            <a href="<?php echo URL;?>administrador">
+            <?php
+                if(isset($_SESSION['email'])){
+                    echo $_SESSION['user'];
+                }else{
+                    echo 'Mi cuenta';
+                }
+            ?>
+            </a>
+            <span class="icon-cart" id="spanCart"></span>
+        </div>
     </nav>
 </div>
 <div class='menuContainer2'>

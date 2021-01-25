@@ -106,6 +106,8 @@ background-image: url('../../assets/fondo1.jpg');
 }
 
 
+
+
 .cajaCategoria::-webkit-scrollbar{
  visibility: hidden;
 }
@@ -160,6 +162,18 @@ cursor: pointer;
     align-content: center;
     margin: 0 2vmax;
     border-radius: 10px;
+    transition: .2s;
+    user-select: none;
+}
+
+.articleView:hover{
+    cursor: pointer;
+    color: rgb(248, 90, 64);
+}
+
+.sessionCategory .tituloCategory:hover{
+    cursor: pointer;
+    color: rgb(248, 90, 64);
 }
 
 
@@ -285,6 +299,16 @@ cursor: pointer;
     .vacio{
         font-size: 12px;
     }
+
+    .articleView:hover{
+        cursor: pointer;
+        color: inherit;
+    }
+
+    .articleView:active{
+        color: rgb(248, 90, 64);
+    }
+    
 }
 
 

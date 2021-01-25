@@ -5,7 +5,10 @@ if(isset($_POST['emailLogin'])){
 require 'controller/administrador/adminSessionController.php';
 }
 
-if(!isset($_SESSION['email'])){session_start();}
+if(!isset($_SESSION['email'])){
+    session_set_cookie_params(60*60*24*1);
+    session_start();
+}
 
 $url =  isset($_REQUEST['url']) ? $_REQUEST['url'] : null;
 
@@ -30,6 +33,8 @@ if(sizeof($url)===2){
     }else if($url[0] === 'busqueda'){
 
     }else if($url[0] === 'categoria'){
+
+    }else if($url[0] === 'articulo'){
 
     }else{
         require_once 'view/404/404.php';

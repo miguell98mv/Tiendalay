@@ -85,6 +85,14 @@ body::-webkit-scrollbar-thumb{
     border-bottom: 1px solid #777;
 }
 
+#represion{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 .sessionCategory{
     width: 100%;
     height: fit-content;
@@ -92,13 +100,18 @@ body::-webkit-scrollbar-thumb{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 15px 0;
     padding-right: 30px;
     border-radius: 10px;
     padding: 20px 0;
+    transition: .2s;
     box-shadow: 1px 1px 2px 1px rgba(0,0,0, 20%);
-    justify-content: center;
+}
+
+.articleView:hover{
+    cursor: pointer;
+    color: rgb(248, 90, 64);
 }
 
 .agrupar{
@@ -108,14 +121,13 @@ body::-webkit-scrollbar-thumb{
     flex-wrap: wrap;
 }
 
-
 .cajaCategoria::-webkit-scrollbar{
  visibility: hidden;
 }
 
 
 .articleView{
-    width: 110px;
+    width: 130px;
     height: fit-content;
     background-color: white;
     display: block;
@@ -125,14 +137,14 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     align-items: center;
     align-content: center;
-    margin: 10px 20px;
+    margin: 20px 40px;
     border-radius: 10px;
 }
 
 .sessionCategory div img{
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 120px;
     position: relative;
 }
 
@@ -168,6 +180,38 @@ body::-webkit-scrollbar-thumb{
 }
 
 
+#paginacion{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#paginacion a{
+    background-color: #037ef3;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#paginacion a:hover{
+    cursor: pointer;
+    background-color: rgb(248, 90, 64);
+}
+
+.paginaSeleccion{
+    background-color: rgb(248, 90, 64) !important;
+}
+
+
+
 @media (max-width: 1200px){
 
 
@@ -178,6 +222,11 @@ body::-webkit-scrollbar-thumb{
     .sessionCategory, #result, #resultCategory{
         width: 90%;
         margin: 10px auto;
+    }
+
+    .articleView{
+        width: 120px;
+        margin: 20px 30px;
     }
 }
 
@@ -208,10 +257,16 @@ body::-webkit-scrollbar-thumb{
 
     .articleView{
         width: 90px;
-        margin: 10px 10px;
+        margin: 20px 30px;
     }
 }
 
+
+@media (max-width: 870px){
+    #represion{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
 
 @media (max-width: 800px){
 
@@ -246,10 +301,29 @@ body::-webkit-scrollbar-thumb{
     .vacio{
         font-size: 12px;
     }
+
+    .articleView:hover{
+        cursor: pointer;
+        color: inherit;
+    }
+
+    .articleView:active{
+        color: rgb(248, 90, 64);
+    }
+
+    #paginacion a{
+        background-color: #037ef3;
+        width: 30px;
+        height: 30px;
+    }
 }
 
 
-
+@media (max-width: 680px){
+    #represion{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 
 @media (max-width: 600px){
@@ -289,7 +363,7 @@ body::-webkit-scrollbar-thumb{
 
     .articleView{
         width: 70px;
-        margin: 10px 10px;
+        margin: 10px 20px;
     }
 }
 
@@ -323,4 +397,15 @@ body::-webkit-scrollbar-thumb{
         font-size: 15px;  
     }
 
+    
+    .articleView{
+        width: 70px;
+        margin: 10px 15px;
+    }
+}
+
+@media (max-width: 300px){
+    #represion{
+        grid-template-columns: 1fr 1fr;
+    }
 }

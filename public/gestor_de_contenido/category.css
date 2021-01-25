@@ -95,7 +95,6 @@ input::placeholder{
 
 .conte2{
     width: 60%;
-    margin-left: -5%;
 }
 
 .add div div{
@@ -107,6 +106,7 @@ input::placeholder{
 }
 
 table{
+    width: 100%;
     border-collapse: collapse;
     box-shadow: 1px 3px 2px rgb(226, 226, 226);
 }
@@ -170,14 +170,12 @@ td:nth-child(1), th:nth-child(1){
 }
 
 #paginacion{
-    width: 80%;
+    width: 100%;
     height: 40px;
-    margin: 40px 0;
-    margin-top: 20px;
-    margin-left: 10%;
     display: block;
     overflow: hidden;
     text-align: center;
+    justify-content: center;
 }
 
 #paginacion a{
@@ -231,6 +229,49 @@ td:nth-child(1), th:nth-child(1){
 }
 
 
+
+@media (max-width: 800px){
+  
+}
+
+
+@media (max-width: 800px){
+
+    .conte1{
+        width: 90%;
+    }
+    
+    .conte2{
+        width: 90%;
+        margin-top: 20px;
+        margin-left: -5%;
+    }
+
+    input[name='añadir']{
+        width: 80px;
+        height: 30px;
+        font-size: .8rem;
+    }
+
+    #loadFileXml{
+        width: 110px;
+        height: 30px;
+        font-size: .8rem;
+    }
+
+    #paginacion a{
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        width: 30px;
+        height: 30px
+        }
+    
+    .add{
+        width: 80vw;
+    }
+}
+
+
 @media (max-width: 600px){
 
 
@@ -262,11 +303,9 @@ td:nth-child(1), th:nth-child(1){
     }
 
     #paginacion{
-        width: 50%;
         height: 40px;
         margin: 40px 0;
         margin-top: 20px;
-        margin-left: 10%;
         display: block;
         overflow: hidden;
         text-align: center;
@@ -279,32 +318,5 @@ td:nth-child(1), th:nth-child(1){
     width: 30px;
     height: 30px
     }
-    
-}
-
-@media (max-width: 680px){
-
-    #getContainer{
-        width: 90vw;
-    }
-
-    input[name='añadir']{
-        width: 80px;
-        height: 30px;
-        font-size: .8rem;
-    }
-
-    #loadFileXml{
-        width: 110px;
-        height: 30px;
-        font-size: .8rem;
-    }
-
-    #paginacion a{
-        font-family: "Poppins", sans-serif;
-        text-decoration: none;
-        width: 30px;
-        height: 30px
-        }
     
 }

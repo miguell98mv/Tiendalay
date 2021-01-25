@@ -250,11 +250,11 @@ td:nth-child(1), th:nth-child(1){
 }
 
 #paginacion{
-    width: 40%;
-    height: 50px;
+    width: fit-content;
+    height: 60px;
     margin: 40px 0;
     margin-top: 40px;
-    margin-left: 10%;
+    margin-left: 25%;
     display: block;
     overflow: hidden;
     text-align: center;
@@ -269,7 +269,7 @@ td:nth-child(1), th:nth-child(1){
     border-radius: 5px;
     color: white;
     background-color: #037ef3;
-    margin:0 10px;
+    margin: 10px 10px;
     display: inline-flex;
     align-items: center;
     align-self: center;

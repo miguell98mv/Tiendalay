@@ -52,14 +52,14 @@ class GetCategoryModel extends Database{
                     echo
                     '<div class="sessionCategory" data-category="$e">
                         <div class="tituloCategory">
-                            <p>'.$e.'</p>
+                            <p onclick='.'location.href='.'"'.URL.'categoria/'.$e.'"'.'>'.$e.'</p>
                         </div>
                         <div class="cajaCategoria">
                         <input type="button" class="buttonScroll" value=">" onclick="botonScrollLeft(this)">
                         <input type="button" class="buttonScrollLeft" value="<" onclick="botonScrollRight(this)">';
                     foreach($articles as $data){
                                 echo
-                                '<div class="articleView">
+                                '<div class="articleView" onclick='.'location.href='.'"'.URL.'articulo/'.$data['id'].'"'.'>
                                     <img src="assets/imagen_article/'.$data['image'].'" alt="">
                                     <p class="priceView">$'.$data['price'].'</p>
                                     <p class="nameView">'.$data['name'].'</p>
