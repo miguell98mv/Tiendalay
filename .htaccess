@@ -1,18 +1,20 @@
-
-# BEGIN WordPress
-# Las directivas (líneas) entre `BEGIN WordPress` y `END WordPress` son
-# generadas dinámicamente, y sólo debe ser modificadas a través de los filtros de WordPress.
-# Cualquier cambio en las directivas entre estos marcadores se sobrescribirá.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+
+
 RewriteRule ^(.*)$ /Almacen/index.php?url=$1 [L,QSA]
 Options All -Indexes
 ErrorDocument 404 /Almacen/view/404/404.php
 ErrorDocument 403 /Almacen/view/404/404.php
 </IfModule>
-
-# END WordPress
