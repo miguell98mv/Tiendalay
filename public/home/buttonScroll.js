@@ -19,7 +19,7 @@ function botonScrollLeft(boton){
 
     boton.parentElement.scrollBy({
         top: 0,
-        left: +300,
+        left: +500,
         behavior: "smooth"
       })
 
@@ -35,7 +35,7 @@ function botonScrollLeft(boton){
         
         boton.nextElementSibling.classList.add('buttonScrollLeft');
         boton.nextElementSibling.style.display = 'block';
-      }, 400);    
+      }, 500);    
 }
 
 
@@ -44,7 +44,7 @@ function botonScrollRight(boton){
 
     boton.parentElement.scrollBy({
         top: 0,
-        left: -300,
+        left: -500,
         behavior: "smooth"
       })
 
@@ -56,7 +56,7 @@ function botonScrollRight(boton){
         
         boton.previousElementSibling.classList.add('buttonScroll');
         boton.previousElementSibling.style.display = 'block';
-      }, 400); 
+      }, 500); 
 }
 
 

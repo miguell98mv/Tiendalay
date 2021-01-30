@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     user-select: none;
+    transition: .2s;
 }
 
 .container{
@@ -74,6 +75,13 @@ body::-webkit-scrollbar-thumb{
     text-decoration: none;
 }
 
+#mensaje{
+    width: 60%;
+    color: rgb(71, 218, 103);
+    margin: 0 auto;
+}
+
+
 #precio{
     width: 100%;
     margin: 30px auto;
@@ -98,6 +106,22 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     white-space:pre;
     color: #333;
+}
+
+#boton{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: white;
+    margin-top: 10px;
+    background-color: #f85a40;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+#boton:hover{
+    cursor: pointer;
+    background-color: #f37b69;
 }
 
 @media (max-width: 1200px){

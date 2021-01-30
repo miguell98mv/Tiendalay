@@ -1,16 +1,15 @@
 const searchArticle = document.getElementById('search');
 const spanSearch = document.getElementById('spanSearch');
 const searchMenu = document.getElementById('searchMenu');
-
 var indexItemSearch = -1;
 
 
-
-window.onload = configWidth;
+window.addEventListener('load', configWidth);
 
 window.addEventListener('resize', configWidth);
 
 searchArticle.addEventListener('click', search);
+
 searchArticle.addEventListener('input', search);
 
 searchArticle.addEventListener('keydown', keySearch);
@@ -25,8 +24,8 @@ spanSearch.addEventListener('click', function(){
 });
 
 //FUNCIONES
-function keySearch(e){
 
+function keySearch(e){
 if(searchMenu.childElementCount){
     var itemsSearch = searchMenu.childElementCount;
 }else{
@@ -34,6 +33,10 @@ if(searchMenu.childElementCount){
 }
     switch(e.code){
         case 'Enter':
+            window.location.href = `${MYURL}busqueda/${searchArticle.value}`;
+        break;
+
+        case 'Insert':
             window.location.href = `${MYURL}busqueda/${searchArticle.value}`;
         break;
 
@@ -73,6 +76,7 @@ function configWidth(){
     searchMenu.style.width = sizeElemtWidth+'px';
     searchMenu.style.top = positionTop;
 }
+
 
 function search(){
     

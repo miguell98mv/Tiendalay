@@ -5,7 +5,8 @@
     padding: 0 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    user-select: none;
+    user-select: none !important;
+    transition: .2s;
 }
 
 body{
@@ -126,6 +127,7 @@ background-image: url('../../assets/fondo1.jpg');
     left: 10px;
     top: 42%;
     z-index: 10000;
+    animation: fideUsuario .1s;
 }
 
 .buttonScroll{
@@ -142,10 +144,18 @@ background-image: url('../../assets/fondo1.jpg');
     right: 10px;
     top: 42%;
     z-index: 10000;
+    animation: fideUsuario .1s;
+}
+
+@keyframes fideUsuario{
+    0%{
+     opacity: 0;
+    }
 }
 
 .buttonScroll:hover, .buttonScrollLeft:hover{
-cursor: pointer;
+    background-color: rgba(248, 89, 64, 0.384);
+    cursor: pointer;
 }
 
 

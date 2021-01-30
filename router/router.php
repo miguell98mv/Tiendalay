@@ -1,11 +1,11 @@
 <?php
 
 
-if(isset($_POST['emailLogin'])){
+if(isset($_POST['emailLogin']) || isset($_POST['client'])){
 require 'controller/administrador/adminSessionController.php';
 }
 
-if(!isset($_SESSION['email'])){
+if(!isset($_SESSION)){
     session_set_cookie_params(60*60*24*1);
     session_start();
 }
@@ -36,6 +36,8 @@ if(sizeof($url)===2){
 
     }else if($url[0] === 'articulo'){
 
+    }else if($url[0] === 'cliente'){
+        
     }else{
         require_once 'view/404/404.php';
         return false; 

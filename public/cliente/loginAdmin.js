@@ -1,11 +1,11 @@
 const password = document.formulario.password;
-const email = document.formulario.email;
+const client = document.formulario.client;
 const userLogin = document.formulario.userLogin;
-const emailLogin = document.formulario.emailLogin;
-const passwordLogin = document.formulario.passwordLogin;
-
-const placeholderText = [email.placeholder, password.placeholder];
+const errorMensaje = document.getElementById('error');
+const placeholderText = [client.placeholder, password.placeholder];
 var error;
+
+
 
 $("[name='botom']").click(function(){
     login();
@@ -13,7 +13,7 @@ $("[name='botom']").click(function(){
 
 function login(){
     error = false;
-    const inputs = [email, password];
+    const inputs = [client, password];
     
 
     for(let e in inputs){
@@ -27,29 +27,26 @@ function login(){
 
 
     if(!error){
-        let formulario = {email:email.value, password:password.value};
         const http = new XMLHttpRequest;
         http.open('post', MYURL+'controller/gestor_de_contenido/log_in.php');
         http.send();
-        $.post(MYURL+'controller/administrador/loginAdminController.php', formulario, saluda);
+        let formulario = {email:client.value, password:password.value};
+        $.post(MYURL+'controller/cliente/loginClientController.php', formulario, getClient);
     }
 }
 
 
-function saluda(datos){
-    var loginData = JSON.parse(datos);
-    userLogin.value = loginData.user;
-    emailLogin.value = loginData.email;
-    passwordLogin.value = loginData.password;
-    
-    if(!loginData.validate){
-        let father = document.getElementById('error');
-        
-        father.innerHTML = "<p>La contraseña o el email es incorrecto!</p>";
-    }else{
-        password.value = '*****************';
-        passwordLogin.value = '*****************';
+function getClient(datos){
+   
+    datos = JSON.parse(datos);
+
+    if(datos.validate){
+        userLogin.value = datos.user;
+        password.value = '';
+
         document.formulario.submit();
+    }else{
+        errorMensaje.innerHTML = "<p>La contraseña o el email es incorrecto!</p>";
     }
 }
 

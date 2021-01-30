@@ -10,17 +10,25 @@
 </head>
 <body>
     <?php
-    require_once __DIR__.'/../home/menu.php'; 
+    require_once __DIR__.'/../home/menu.php';
+
+    if(isset($_SESSION['client'])){
+    echo
+    '<input type="hidden" id="userClient" value="'.$_SESSION['client'].'">';
+    }
     ?>
+
     <input type="hidden" id="url" value="<?php echo $url[1]?>">
     <div class="container">
     <a id="categoria" href=""></a>
         <div id="cajaArticulo">
             <div id="cajaImagen"></div>
             <div id="cajaTituloYDescripcion">
+                <p id='mensaje'></p>
                 <p id="precio"></p>
                 <h1 id="tituloArticulo"></h1>
                 <p id="descripcion"></p>
+                <button id="boton">Agregar al carrito</button>
             </div>
         </div>
     </div>

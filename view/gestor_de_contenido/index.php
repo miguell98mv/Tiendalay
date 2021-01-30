@@ -62,7 +62,7 @@
             require 'view/gestor_de_contenido/categorias.php';
             return false;
         }
-
+        
         ?>
 
     </div>

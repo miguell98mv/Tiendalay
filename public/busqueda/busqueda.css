@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     user-select: none;
+    transition: .2s;
 }
 
 .container{
@@ -139,6 +140,7 @@ body::-webkit-scrollbar-thumb{
     align-content: center;
     margin: 20px 40px;
     border-radius: 10px;
+    transition: .2s;
 }
 
 .sessionCategory div img{
