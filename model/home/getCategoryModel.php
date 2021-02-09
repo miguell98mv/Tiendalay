@@ -75,7 +75,7 @@ class GetCategoryModel extends Database{
                     echo 
                     '<div class="sessionCategory" data-category="$e">
                         <div class="tituloCategory">
-                            <p>'.$e.'</p>
+                            <p onclick='.'location.href='.'"'.URL.'categoria/'.$e.'"'.'>'.$e.'</p>
                         </div>
                         <div class="vacio">
                             No Hay articulos en esta categoria

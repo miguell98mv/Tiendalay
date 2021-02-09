@@ -4,15 +4,6 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-
-
 RewriteRule ^(.*)$ /Almacen/index.php?url=$1 [L,QSA]
 Options All -Indexes
 ErrorDocument 404 /Almacen/view/404/404.php
